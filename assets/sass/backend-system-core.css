@@ -1,0 +1,334 @@
+/*
+Author         : Gustavo M. Benitez
+Template Name  : Backend System Template - jQuery
+Version        : 1.0
+*/
+/*=============================================================
+    Table of Contents:
+    ==============================
+    A. Globals
+        01. Custom Animation
+    B. Base
+        01. Base Styles
+        02. Typography Styles
+    C. Layouts
+        01. App Layout Styles
+        02. Header Styles
+        03. Navbar Styles
+        04. Main Content Styles
+        05. Sidebar Styles
+        06. Right Sidebar Styles
+        07. Footer Styles
+        08. Loader Styles
+    D. UI Components
+        01. Alert Styles
+        02. Avatar Styles
+        03. Accordions Styles
+        04. Badges Styles
+        05. Blockquotes Styles
+        06. Bottom Navigation Styles
+        07. Breadcrumb Styles
+        08. Button Styles
+        09. Button Group Styles
+        10. Callout Styles
+        11. Cards Styles
+        12. Charts Styles
+        13. Carousel Styles
+        14. Dropdown Menus Styles
+        15. Dropzone Styles
+        16. Form Styles
+        17. Icons Styles
+        18. Input Style
+        19. Label Styles
+        20. List Styles
+        21. Nav Style
+        22. Pricing Tables Styles
+        23. Progressbar Styles
+        24. Popover Styles
+        25. Pager Styles
+        26. Tables Styles
+        27. Tabs Styles
+        28. Testimonial Styles
+        29. Time Lines Style
+    E. Pages
+        01. App Module Styles
+        02. Contact Page Styles
+        03. Color Picker Styles
+        04. Dashboard Styles
+        05. Error Styles
+        06. Editor Styles
+        07. Ecommerce Styles
+        08. Faq Styles
+        09. Login Styles
+        10. Portfolio Styles
+        11. Picker Styles
+        12. Sweet Alert Styles
+        13. Vector Map Styles
+    F. Slider
+        01. Light Slider Styles
+        02. Owl Carousel Style
+    G. Modules
+        01. Module Style
+        02. Chat Module Styles
+        03. Contact Module Styles
+        04. Calendar Module Style
+        05. Mails Module Styles
+    H. Color Theme
+        01. Theme Indigo Styles
+        02. Theme Cyan Styles
+        03. Theme Amber Styles
+        04. Theme Deep Orange Styles
+        05. Theme Pink Styles
+        06. Theme Blue Styles
+        07. Theme Deep Purple Styles
+        08. Theme Green Styles
+        09. Theme Dark Indigo Styles
+        10. Theme Dark Cyan Styles
+        11. Theme Dark Amber Styles
+        12. Theme Dark Deep Orange Styles
+        13. Theme Dark Pink Styles
+        14. Theme Dark Blue Styles
+        15. Theme Dark Deep Purple Styles
+        16. Theme Dark Green Styles
+        17. Theme Dark Styles
+  =============================================================*/
+/* Globals
+   ========================================================================== */
+/* Base
+   ========================================================================== */
+/*Base Styles*/
+body {
+  margin: 0;
+  padding-top: 76px;
+  font-family: Poppins;
+  background-color: #ECEBEF;
+}
+
+html {
+  font-size: 13px;
+  font-weight: 300;
+  font-family: Poppins;
+  -webkit-text-size-adjust: 100%;
+}
+
+hr {
+  width: 100%;
+}
+
+.page-wrapper {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/*typography*/
+/* Layouts
+   ========================================================================== */
+/*Layout Styles*/
+#overlay {
+  position: fixed;
+  /* Sit on top of the page content */
+  display: none;
+  /* Hidden by default */
+  width: 100%;
+  /* Full width (cover the whole page) */
+  height: 100%;
+  /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Black background with opacity */
+  z-index: 8000;
+  /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer;
+  /* Add a pointer on hover */
+}
+
+/*Navbar Styles*/
+nav {
+  height: 76px;
+}
+
+#menu-minifier {
+  font-size: 25px;
+  cursor: pointer;
+}
+
+#sidebar-toggler {
+  font-size: 25px;
+  cursor: pointer;
+}
+
+#menu-minifier > .fa {
+  color: #fff;
+}
+
+#user-menu > .dropdown-toggle::after {
+  display: none;
+}
+
+#user-menu > button {
+  color: #e1e1ef;
+}
+
+#user-menu > button {
+  font-size: 25px;
+}
+
+#sidebar-toggler > .fa {
+  color: #fff;
+}
+
+#sidebar-toggler > .fa :hover {
+  color: #439ed8;
+}
+
+#logo {
+  line-height: 34px;
+  height: 34px;
+  width: 44px;
+  background-color: #439ed8;
+  text-align: center;
+  border-radius: 5px;
+  font-weight: bold;
+  font-stretch: ultra-expanded;
+  color: #fff;
+}
+
+/*Sidebar Styles*/
+#sidebar {
+  background: #fff;
+  width: 300px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 8000;
+  box-shadow: 0px 1px 9px -3px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 1px 9px -3px rgba(0, 0, 0, 0.75);
+  opacity: 1;
+  visibility: hidden;
+}
+
+#sidebar.visible {
+  visibility: visible;
+}
+
+#sidebar-wrapper {
+  margin-top: 30px;
+  margin-left: 30px;
+  width: 240px;
+}
+
+#sidebar-close-button {
+  float: right;
+  margin-top: -20px;
+  cursor: pointer;
+}
+
+#sidebar-close-button i {
+  color: gray;
+}
+
+#sidebar-close-button :hover {
+  background-color: #439ed8;
+  padding: 5px;
+  color: white;
+  border-radius: 3px;
+}
+
+.nav-item-link {
+  cursor: pointer;
+  margin: 10px 0;
+  font-size: 1.1rem;
+}
+
+.nav-item-link .link-text span {
+  color: #5d5b6f;
+}
+
+.nav-item-link .section-text {
+  color: #b1afbc;
+  cursor: none;
+}
+
+.nav-title {
+  font-size: 1.4rem;
+  font-weight: 520;
+  color: #33323f;
+  margin: 0;
+  padding: 0;
+}
+
+/*Footer Styles*/
+#footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  /* Set the fixed height of the footer here */
+  line-height: 60px;
+  /* Vertically center the text there */
+  background-color: #fff;
+  padding-left: 1rem;
+}
+
+/* Layouts
+   ========================================================================== */
+/*Loader Styles*/
+/* UI Components */
+/*Breadcrumb Styles*/
+#wrapper-breadcrumb > .breadcrumb {
+  border-radius: 0;
+  background-color: #fff;
+  min-height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-shadow: 0px 0px 40px 0px rgba(82, 63, 105, 0.05);
+          box-shadow: 0px 0px 40px 0px rgba(82, 63, 105, 0.05);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+#wrapper-breadcrumb > .breadcrumb > .breadcrumb-item a {
+  color: #212529;
+}
+
+/*Cards Styles*/
+.card {
+  box-shadow: 0px 1px 9px -3px rgba(82, 63, 105, 0.1);
+  -webkit-box-shadow: 0px 1px 9px -3px rgba(82, 63, 105, 0.1);
+}
+
+.icon-big {
+  font-size: 3.5em;
+  min-height: 64px;
+  padding-top: 10px;
+}
+
+/*Charts Styles*/
+/* Base 
+    ========================================================================== */
+.sign-in-wrapper {
+  height: 100vh -76px;
+  margin-top: -76px;
+}
+
+#sign-in-form-container {
+  bottom: 0;
+  height: 100vh;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.502);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.502);
+  z-index: 10;
+  overflow-y: auto;
+  padding: 40px;
+}
+/*# sourceMappingURL=backend-system-core.css.map */

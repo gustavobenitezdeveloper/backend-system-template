@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Backend System Template</title>
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <!-- backend-system theme base -->
+    <link rel="stylesheet" href="assets/sass/backend-system-core.css">
+    <!--begin::Fonts -->
+    <link href="assets/css/fonts-googleapis.css" rel="stylesheet">
+    <!--end::Fonts -->
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+
+    </div>
+
+    <!-- Overlay -->
+    <div id="overlay">
+        <div id="sidebar">
+            <div id="sidebar-wrapper">
+                <h4 class="nav-title">Options</h4>
+                <a id="sidebar-close-button">
+                    <i class="fa fa-times"></i>
+                </a>
+                <ul class="nav flex-column nav-sidebar pt-5">
+                    <li class="nav-item-link">
+                        <span class="link-text">
+                            Dashboard
+                        </span>
+                    </li>
+                    <li class="nav-item-link">
+                        <h5 class="section-text">CUSTOMERS</h5>
+                    </li>
+                    <li class="nav-item-link">
+                        <a class="link-text">
+                            Customers
+                        </a>
+                    </li>
+                    <li class="nav-item-link">
+                        <a class="link-text">
+                            Contacts
+                        </a>
+                    </li>
+                    <li class="nav-item-link">
+                        <h5 class="section-text">WORKS</h5>
+                    </li>
+                    <li class="nav-item-link">
+                        <a class="link-text">
+                            Leads
+                        </a>
+                    </li>
+                    <li class="nav-item-link">
+                        <a class="link-text">
+                            Projects
+                        </a>
+                    </li>
+                    <li class="nav-item-link">
+                        <h5 class="section-text">SYSTEM</h5>
+                    </li>
+                    <li class="nav-item-link">
+                        <a class="link-text">
+                            Users
+                        </a>
+                    </li>
+                    <li class="nav-item-link">
+                        <a class="link-text">
+                            Config
+                        </a>
+                    </li>
+                    <li class="nav-item-link">
+                        <h5 class="section-text">EXAMPLES</h5>
+                    </li>
+                    <li class="nav-item-link">
+                        <a class="link-text">
+                            Emails
+                        </a>
+                    </li>
+                    <li class="nav-item-link">
+                        <a class="link-text">
+                            Todo
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Top navbar START -->
+    <nav class="navbar navbar-expand bg-dark fixed-top d-flex flex-row justify-content-start">
+        <div class="d-none d-lg-block">
+            <div id="menu-minifier">
+                <i class="fa fa-lg fa-bars"></i>
+            </div>
+        </div>
+        <a class="navbar-brand px-lg-3 px-1 mr-0" href="#">
+            <div id="logo">
+                CRM
+            </div>
+        </a>
+        <div class="ml-auto">
+            <div class="navbar-nav flex-row navbar-icons">
+                <div id="user-menu" class="nav-item dropdown">
+                    <button class="btn btn-link nav-link dropdown-toggle" title="User" type="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-lg fa-user-circle"></i>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <a class="dropdown-item">Profile</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item">Logout</a>
+                    </div>
+                </div>
+                <div class="nav-item d-lg-none">
+                    <button id="sidebar-toggler" type="button" class="btn btn-link nav-link" data-toggle="offcanvas">
+                        <i class="fa fa-lg fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Top navbar END -->
+
+    <!-- page-wrapper START -->
+    <div class="page-wrapper pb-3">
+        <div id="wrapper-breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="#">Home</a>
+                </li>
+            </ol>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="card-innerBody d-flex align-items-center">
+                                <div class="card-icon text-warning">
+                                    <i class="fas fa-file-invoice-dollar icon-big" aria-hidden="true"></i>
+                                </div>
+                                <div class="ml-auto">
+                                    <p class="card-label text-right text-muted">Sales</p>
+                                    <h4 class="card-text text-right ">$ 199,099</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer d-flex ">
+                            <small class="text-muted">Since last month</small>
+                            <small class="text-success ml-auto">
+                                <i class="fa fa-caret-up" aria-hidden="true"></i>
+                                5,35%
+                            </small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="card-innerBody d-flex align-items-center">
+                                <div class="card-icon text-success">
+                                    <i class="fa fa-shopping-cart icon-big" aria-hidden="true"></i>
+                                </div>
+                                <div class="ml-auto">
+                                    <p class="card-label text-right text-muted">Orders</p>
+                                    <h4 class="card-text text-right ">2,200</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer d-flex ">
+                            <small class="text-muted">Since last month</small>
+                            <small class="text-success ml-auto">
+                                <i class="fa fa-caret-up" aria-hidden="true"></i>
+                                8,66%
+                            </small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="card-innerBody d-flex align-items-center">
+                                <div class="card-icon text-default">
+                                    <i class="fa fa-users icon-big" aria-hidden="true"></i>
+                                </div>
+                                <div class="ml-auto">
+                                    <p class="card-label text-right text-muted">Leads</p>
+                                    <h4 class="card-text text-right ">702,258</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer d-flex ">
+                            <small class="text-muted">Since last month</small>
+                            <small class="text-danger ml-auto">
+                                <i class="fa fa-caret-down" aria-hidden="true"></i>
+                                2,81%
+                            </small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="card-innerBody d-flex align-items-center">
+                                <div class="card-icon text-default">
+                                    <i class="fa fa-heartbeat icon-big" aria-hidden="true"></i>
+                                </div>
+                                <div class="ml-auto">
+                                    <p class="card-label text-right text-muted">Followers</p>
+                                    <h4 class="card-text text-right "> +50K</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer d-flex ">
+                            <small class="text-muted">Since last month</small>
+                            <small class="text-success ml-auto">
+                                <i class="fa fa-caret-up" aria-hidden="true"></i>
+                                1,74%
+                            </small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card ">
+                        <div class="card-header ">
+                            <h5 class="card-title">Email Statistics</h5>
+                            <p class="card-category">Last Campaign Performance</p>
+                        </div>
+                        <div class="card-body ">
+                            <canvas id="chartEmail"></canvas>
+                        </div>
+                        <div class="card-footer ">
+                            <div class="legend">
+                                <i class="fa fa-circle text-primary"></i> Opened
+                                <i class="fa fa-circle text-warning"></i> Read
+                                <i class="fa fa-circle text-danger"></i> Deleted
+                                <i class="fa fa-circle text-gray"></i> Unopened
+                            </div>
+                            <hr>
+                            <div class="stats">
+                                <i class="fa fa-calendar"></i> Number of emails sent
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="card card-chart">
+                        <div class="card-header">
+                            <h5 class="card-title">Sales vs Forecast</h5>
+                            <p class="card-category">Line Chart with Points</p>
+                        </div>
+                        <div class="card-body">
+                            <canvas id="speedChart" width="400" height="100"></canvas>
+                        </div>
+                        <div class="card-footer">
+                            <div class="chart-legend">
+                                <i class="fa fa-circle text-info"></i> Sales
+                                <i class="fa fa-circle text-warning"></i> Forecast
+                            </div>
+                            <hr />
+                            <div class="card-stats">
+                                <i class="fa fa-check"></i> Data information certified
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- page-wrapper END -->
+
+    <!-- footer START -->
+    <div id="footer">
+        <span>Backend System Template</span>
+        <a href="https://github.com/gustavobenitezdeveloper">
+            <span class="float-right mr-3">Power by Gustavo M. Benitez</span>
+        </a>
+    </div>
+    <!-- footer END -->
+
+    <!-- jQuery -->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <!-- popper -->
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <!--boostrap-->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!--chart.js-->
+    <script src="node_modules/chart.js/dist/Chart.min.js"></script>
+    <!--index.js-->
+    <script src="assets/js/screens/index.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            // Contract/expand side menu on click.
+
+            $("#menu-minifier, #sidebar-toggler").click(function (e) {
+                $("#sidebar").addClass("visible");
+                $("#overlay").css("display", "block");
+            });
+
+            $("#sidebar-close-button").click(function (e) {
+                $("#sidebar").removeClass("visible");
+                $("#overlay").css("display", "none");
+            });
+
+            index.initChartsPages();
+        });
+    </script>
+</body>
+
+</html>
